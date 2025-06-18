@@ -11,14 +11,14 @@
 
         <Button
             android:id="@+id/btnYeniDugun"
-            android:text="Yeni Düğün Ekle"
-            android:layout_width="match_parent"
+            android:text="@string/btn_yeni_dugun_ekle"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
         <Button
             android:id="@+id/btnOzet"
-            android:text="Kazanç Özeti"
-            android:layout_width="match_parent"
+            android:text="@string/title_kazanc_ozeti"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
     </LinearLayout>

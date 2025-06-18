@@ -12,6 +12,8 @@ class SummaryActivity : AppCompatActivity() {
 
         val db = DatabaseHelper(this)
         val toplam = db.toplamKazanc()
-        findViewById<TextView>(R.id.textViewOzet).text = "Toplam Kazanç: ₺$toplam"
+        val sonuc = getString(R.string.toplam_kazanc, toplam)
+        findViewById<TextView>(R.id.textViewOzet).text = sonuc
     }
+
 }

@@ -7,52 +7,56 @@
 
     <EditText
         android:id="@+id/editTarih"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Tarih (2025-06-17)" />
+        android:layout_width="wrap_content"
+        android:layout_height="56dp"
+        android:hint="@string/hint_tarih"
+        android:inputType="date"
+        android:autofillHints="date" />
 
     <EditText
         android:id="@+id/editDugunSayisi"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Düğün Sayısı" />
+        android:layout_width="wrap_content"
+        android:layout_height="56dp"
+        android:hint="@string/hint_dugun_sayisi"
+        android:inputType="number"
+        android:autofillHints="none" />
 
     <EditText
         android:id="@+id/editKazanc"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Kazanç (₺)" />
+        android:layout_width="wrap_content"
+        android:layout_height="56dp"
+        android:hint="@string/hint_kazanc"
+        android:inputType="numberDecimal"
+        android:autofillHints="moneyAmount" />
 
     <EditText
         android:id="@+id/editBahsis"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Bahşiş (₺)" />
+        android:layout_width="wrap_content"
+        android:layout_height="56dp"
+        android:hint="@string/hint_bahsis"
+        android:inputType="numberDecimal"
+        android:autofillHints="moneyAmount" />
 
     <EditText
         android:id="@+id/editMasraf"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Masraf (₺)" />
+        android:layout_width="wrap_content"
+        android:layout_height="56dp"
+        android:hint="@string/hint_masraf"
+        android:inputType="numberDecimal"
+        android:autofillHints="moneyAmount" />
 
     <Button
         android:id="@+id/btnKaydet"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Kaydet"
+        android:text="@string/btn_kaydet"
         android:layout_marginTop="16dp" />
+
     <TextView
         android:id="@+id/textViewOzet"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Toplam Kazanç: ₺0.00"
-        android:textSize="18sp"
-        android:textStyle="bold" />
-    <TextView
-        android:id="@+id/textViewOzet"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Toplam Kazanç: ₺0.00"
+        android:text="@string/ozet_toplam_kazanc"
         android:textSize="18sp"
         android:textStyle="bold"
         android:padding="16dp" />

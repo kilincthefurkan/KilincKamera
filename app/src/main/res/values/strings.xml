@@ -1,5 +1,15 @@
 <resources>
     <string name="app_name">Kılınç Kamera</string>
     <string name="toplam_kazanc">Toplam Kazanç: ₺%1$.2f</string>
+    <string name="btn_kaydet">Kaydet</string>
+    <string name="hint_tarih">Tarih (2025–06–17)</string>
+    <string name="hint_dugun_sayisi">Düğün Sayısı</string>
+    <string name="hint_kazanc">Kazanç (₺)</string>
+    <string name="hint_bahsis">Bahşiş (₺)</string>
+    <string name="hint_masraf">Masraf (₺)</string>
+    <string name="btn_yeni_dugun_ekle">Yeni Düğün Ekle</string>
+    <string name="title_kazanc_ozeti">Kazanç Özeti</string>
+    <string name="ozet_toplam_kazanc">Toplam Kazanç: ₺0.00</string>
+
 
 </resources>

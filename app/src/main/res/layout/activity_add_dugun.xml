@@ -3,24 +3,65 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:orientation="vertical" android:padding="24dp"
-        android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-        <EditText android:id="@+id/editTarih" android:hint="Tarih (2025-06-17)"
-            android:layout_width="match_parent" android:layout_height="wrap_content" />
-        <EditText android:id="@+id/editDugunSayisi" android:hint="Düğün Sayısı"
-            android:layout_width="match_parent" android:layout_height="wrap_content" />
-        <EditText android:id="@+id/editKazanc" android:hint="Kazanç (₺)"
-            android:layout_width="match_parent" android:layout_height="wrap_content" />
-        <EditText android:id="@+id/editBahsis" android:hint="Bahşiş (₺)"
-            android:layout_width="match_parent" android:layout_height="wrap_content" />
-        <EditText android:id="@+id/editMasraf" android:hint="Masraf (₺)"
-            android:layout_width="match_parent" android:layout_height="wrap_content" />
+        <EditText
+            android:id="@+id/editTarih"
+            android:layout_width="wrap_content"
+            android:layout_height="56dp"
+            android:hint="@string/hint_tarih"
+            android:inputType="date"
+            android:autofillHints="date"
+            android:padding="12dp" />
 
-        <Button android:id="@+id/btnKaydet" android:text="Kaydet"
-            android:layout_width="match_parent" android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"/>
+        <EditText
+            android:id="@+id/editDugunSayisi"
+            android:hint="@string/hint_dugun_sayisi"
+            android:layout_width="wrap_content"
+            android:layout_height="56dp"
+            android:inputType="number"
+            android:autofillHints="none"
+            android:padding="12dp" />
+
+        <EditText
+            android:id="@+id/editKazanc"
+            android:hint="@string/hint_kazanc"
+            android:layout_width="wrap_content"
+            android:layout_height="56dp"
+            android:inputType="numberDecimal"
+            android:autofillHints="moneyAmount"
+            android:padding="12dp" />
+
+        <EditText
+            android:id="@+id/editBahsis"
+            android:hint="@string/hint_bahsis"
+            android:layout_width="wrap_content"
+            android:layout_height="56dp"
+            android:inputType="numberDecimal"
+            android:autofillHints="moneyAmount"
+            android:padding="12dp" />
+
+        <EditText
+            android:id="@+id/editMasraf"
+            android:hint="@string/hint_masraf"
+            android:layout_width="wrap_content"
+            android:layout_height="56dp"
+            android:inputType="numberDecimal"
+            android:autofillHints="moneyAmount"
+            android:padding="12dp" />
+
+        <Button
+            android:id="@+id/btnKaydet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/btn_kaydet" />
+
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
