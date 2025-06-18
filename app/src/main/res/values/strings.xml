@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Kılınç Kamera</string>
+    <string name="toplam_kazanc">Toplam Kazanç: ₺%1$.2f</string>
+
 </resources>

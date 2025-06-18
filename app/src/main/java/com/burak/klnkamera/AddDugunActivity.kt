@@ -1,9 +1,9 @@
-package com.kilinc.kamera
+package com.burak.klnkamera
 
 import android.os.Bundle
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
-import com.kilinc.kamera.data.DatabaseHelper
+import com.burak.klnkamera.data.DatabaseHelper
 
 class AddDugunActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

@@ -1,17 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="24dp"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:orientation="vertical" android:padding="24dp"
-        android:layout_width="match_parent" android:layout_height="match_parent">
+    <EditText
+        android:id="@+id/editTarih"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Tarih (2025-06-17)" />
 
-        <TextView android:id="@+id/textViewOzet"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Toplam Kazanç:"
-            android:textSize="18sp" />
-    </LinearLayout>
+    <EditText
+        android:id="@+id/editDugunSayisi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Düğün Sayısı" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <EditText
+        android:id="@+id/editKazanc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Kazanç (₺)" />
+
+    <EditText
+        android:id="@+id/editBahsis"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Bahşiş (₺)" />
+
+    <EditText
+        android:id="@+id/editMasraf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Masraf (₺)" />
+
+    <Button
+        android:id="@+id/btnKaydet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Kaydet"
+        android:layout_marginTop="16dp" />
+    <TextView
+        android:id="@+id/textViewOzet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Toplam Kazanç: ₺0.00"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+    <TextView
+        android:id="@+id/textViewOzet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Toplam Kazanç: ₺0.00"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:padding="16dp" />
+
+</LinearLayout>

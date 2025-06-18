@@ -1,4 +1,4 @@
-package com.kilinc.kamera.data
+package com.burak.klnkamera.data
 
 import android.content.ContentValues
 import android.content.Context
@@ -38,6 +38,8 @@ class DatabaseHelper(context: Context) :
     fun toplamKazanc(): Double {
         val db = readableDatabase
         val cursor = db.rawQuery("SELECT SUM(kazanc + bahsis - masraf) FROM dugun", null)
-        return if (cursor.moveToFirst()) cursor.getDouble(0) else 0.0
+        val toplam = if (cursor.moveToFirst()) cursor.getDouble(0) else 0.0
+        cursor.close()  // Bunu eklemelisin!
+        return toplam
     }
 }

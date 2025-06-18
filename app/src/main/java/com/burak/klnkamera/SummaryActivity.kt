@@ -1,9 +1,9 @@
-package com.kilinc.kamera
+package com.burak.klnkamera
 
 import android.os.Bundle
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import com.kilinc.kamera.data.DatabaseHelper
+import com.burak.klnkamera.data.DatabaseHelper
 
 class SummaryActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

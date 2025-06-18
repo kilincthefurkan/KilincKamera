@@ -1,4 +1,4 @@
-package com.kilinc.kamera
+package com.burak.klnkamera
 
 import android.content.Intent
 import android.os.Bundle
@@ -17,5 +17,6 @@ class MainActivity : AppCompatActivity() {
         findViewById<Button>(R.id.btnOzet).setOnClickListener {
             startActivity(Intent(this, SummaryActivity::class.java))
         }
+
     }
 }
