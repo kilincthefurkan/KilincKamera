@@ -12,20 +12,18 @@
         <EditText
             android:id="@+id/editTarih"
             android:layout_width="wrap_content"
-            android:layout_height="56dp"
-            android:hint="@string/hint_tarih"
-            android:inputType="date"
+            android:layout_height="wrap_content"
+            android:inputType="text"
             android:autofillHints="date"
-            android:padding="12dp" />
+            android:minHeight="48dp"
+            android:padding="12dp"
+            android:hint="@string/hint_tarih" />
 
-        <EditText
-            android:id="@+id/editDugunSayisi"
-            android:hint="@string/hint_dugun_sayisi"
-            android:layout_width="wrap_content"
-            android:layout_height="56dp"
-            android:inputType="number"
-            android:autofillHints="none"
-            android:padding="12dp" />
+
+
+
+
+
 
         <EditText
             android:id="@+id/editKazanc"
@@ -54,12 +52,32 @@
             android:autofillHints="moneyAmount"
             android:padding="12dp" />
 
+        <Spinner
+            android:id="@+id/spinnerKonum"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="16dp"
+            />
+
+        <EditText
+            android:id="@+id/editAciklama"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_aciklama"
+            android:inputType="textMultiLine"
+            android:lines="3"
+            android:gravity="top"
+            android:layout_marginTop="8dp"
+            android:autofillHints="free_form" />
+
+
         <Button
             android:id="@+id/btnKaydet"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
             android:text="@string/btn_kaydet" />
+
+
 
 
     </LinearLayout>

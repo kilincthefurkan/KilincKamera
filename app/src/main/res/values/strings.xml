@@ -2,7 +2,7 @@
     <string name="app_name">Kılınç Kamera</string>
 
     <string name="btn_kaydet">Kaydet</string>
-    <string name="hint_tarih">Tarih (2025–06–17)</string>
+    <string name="hint_tarih">Tarih (Tıkla)</string>
     <string name="hint_dugun_sayisi">Düğün Sayısı</string>
     <string name="hint_kazanc">Kazanç (₺)</string>
     <string name="hint_bahsis">Bahşiş (₺)</string>
@@ -25,6 +25,14 @@
     <string name="ciro">Ciro: ₺%1$s</string>
     <string name="kar">Kar: ₺%1$s</string>
     <string name="btn_verileri_sifirla">Verileri Sıfırla</string>
+    <string name="kazanc_format">Kazanç: ₺%1$s</string>
+    <string name="toplam_kazanc_label">Toplam Kazanç: ₺%1$s</string>
+    <string name="konum_sayaci">İzmir: %1$d | Aydın: %2$d | Diğer: %3$d</string>
+    <string name="hint_aciklama">Açıklama (isteğe bağlı)</string>
+
+    <string name="konum_sayac">İzmir: %1$d | Aydın: %2$d | Diğer: %3$d</string>
+
+
 
 
 

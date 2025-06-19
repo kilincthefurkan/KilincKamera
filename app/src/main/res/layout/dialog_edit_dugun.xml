@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+<LinearLayout
+
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/editTarih"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:padding="12dp"
+        android:hint="@string/hint_tarih"
+        android:inputType="date"
+        android:autofillHints="birthdate"/>
+
+    <EditText
+        android:id="@+id/editKazanc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:padding="12dp"
+        android:hint="@string/hint_kazanc"
+        android:inputType="numberDecimal"
+        android:autofillHints="creditCardNumber"/>
+
+    <EditText
+        android:id="@+id/editBahsis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:padding="12dp"
+        android:hint="@string/hint_bahsis"
+        android:inputType="numberDecimal"
+        android:autofillHints="creditCardNumber"/>
+
+    <EditText
+        android:id="@+id/editMasraf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:padding="12dp"
+        android:hint="@string/hint_masraf"
+        android:inputType="numberDecimal"
+        android:autofillHints="creditCardNumber" />
+
+    <Spinner
+        android:id="@+id/spinnerKonum"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="12dp" />
+
+    <EditText
+        android:id="@+id/editAciklama"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:autofillHints="comments"
+        android:gravity="top"
+        android:hint="@string/hint_aciklama"
+        android:inputType="textMultiLine"
+        android:lines="3"
+        android:maxWidth="360dp" />
+</LinearLayout>
+
+
+
+</ScrollView>
