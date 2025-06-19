@@ -5,60 +5,57 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <EditText
-        android:id="@+id/editTarih"
-        android:layout_width="wrap_content"
-        android:layout_height="56dp"
-        android:hint="@string/hint_tarih"
-        android:inputType="date"
-        android:autofillHints="date" />
-
-    <EditText
-        android:id="@+id/editDugunSayisi"
-        android:layout_width="wrap_content"
-        android:layout_height="56dp"
-        android:hint="@string/hint_dugun_sayisi"
-        android:inputType="number"
-        android:autofillHints="none" />
-
-    <EditText
-        android:id="@+id/editKazanc"
-        android:layout_width="wrap_content"
-        android:layout_height="56dp"
-        android:hint="@string/hint_kazanc"
-        android:inputType="numberDecimal"
-        android:autofillHints="moneyAmount" />
-
-    <EditText
-        android:id="@+id/editBahsis"
-        android:layout_width="wrap_content"
-        android:layout_height="56dp"
-        android:hint="@string/hint_bahsis"
-        android:inputType="numberDecimal"
-        android:autofillHints="moneyAmount" />
-
-    <EditText
-        android:id="@+id/editMasraf"
-        android:layout_width="wrap_content"
-        android:layout_height="56dp"
-        android:hint="@string/hint_masraf"
-        android:inputType="numberDecimal"
-        android:autofillHints="moneyAmount" />
-
-    <Button
-        android:id="@+id/btnKaydet"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/btn_kaydet"
-        android:layout_marginTop="16dp" />
-
     <TextView
-        android:id="@+id/textViewOzet"
+        android:id="@+id/textViewToplamKazanc"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/ozet_toplam_kazanc"
+        android:text="@string/toplam_kazanc"
         android:textSize="18sp"
         android:textStyle="bold"
-        android:padding="16dp" />
+        android:padding="8dp" />
+
+    <TextView
+        android:id="@+id/textViewToplamBahsis"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/toplam_bahsis"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:padding="8dp" />
+
+    <TextView
+        android:id="@+id/textViewToplamMasraf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/toplam_masraf"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:padding="8dp" />
+
+    <TextView
+        android:id="@+id/textViewCiro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/ciro"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:padding="8dp" />
+
+    <TextView
+        android:id="@+id/textViewKar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/kar"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:padding="8dp" />
+
+    <Button
+        android:id="@+id/btnVerileriSifirla"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_verileri_sifirla"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="24dp"/>
 
 </LinearLayout>

@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">Kılınç Kamera</string>
-    <string name="toplam_kazanc">Toplam Kazanç: ₺%1$.2f</string>
+
     <string name="btn_kaydet">Kaydet</string>
     <string name="hint_tarih">Tarih (2025–06–17)</string>
     <string name="hint_dugun_sayisi">Düğün Sayısı</string>
@@ -9,7 +9,24 @@
     <string name="hint_masraf">Masraf (₺)</string>
     <string name="btn_yeni_dugun_ekle">Yeni Düğün Ekle</string>
     <string name="title_kazanc_ozeti">Kazanç Özeti</string>
-    <string name="ozet_toplam_kazanc">Toplam Kazanç: ₺0.00</string>
+    <string name="ozet_toplam_kazanc">Toplam Kazanç: ₺%1$.2f</string>
+    <string name="ozet_toplam_bahsis">Toplam Bahşiş: ₺%1$.2f</string>
+    <string name="ozet_toplam_masraf">Toplam Masraf: ₺%1$.2f</string>
+    <string name="ozet_ciro">Ciro: ₺%1$.2f</string>
+    <string name="ozet_kar">Kâr: ₺%1$.2f</string>
+    <string-array name="filtre_secenekleri">
+        <item>Tüm Zamanlar</item>
+        <item>Bu Hafta</item>
+        <item>Bu Ay</item>
+    </string-array>
+    <string name="toplam_kazanc">Toplam Kazanç: ₺%1$s</string>
+    <string name="toplam_bahsis">Toplam Bahşiş: ₺%1$s</string>
+    <string name="toplam_masraf">Toplam Masraf: ₺%1$s</string>
+    <string name="ciro">Ciro: ₺%1$s</string>
+    <string name="kar">Kar: ₺%1$s</string>
+    <string name="btn_verileri_sifirla">Verileri Sıfırla</string>
+
+
 
 
 </resources>

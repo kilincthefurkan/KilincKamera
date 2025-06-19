@@ -35,11 +35,32 @@ class DatabaseHelper(context: Context) :
         db.insert("dugun", null, values)
     }
 
-    fun toplamKazanc(): Double {
+    fun sumColumn(columnName: String): Double {
         val db = readableDatabase
-        val cursor = db.rawQuery("SELECT SUM(kazanc + bahsis - masraf) FROM dugun", null)
-        val toplam = if (cursor.moveToFirst()) cursor.getDouble(0) else 0.0
-        cursor.close()  // Bunu eklemelisin!
-        return toplam
+        val cursor = db.rawQuery("SELECT SUM($columnName) FROM dugun", null)
+        var sum = 0.0
+        if (cursor.moveToFirst()) {
+            sum = cursor.getDouble(0)
+        }
+        cursor.close()
+        return sum
+    }
+
+    fun sumColumnBetweenDates(column: String, startDate: String, endDate: String): Double {
+        val db = readableDatabase
+        val cursor = db.rawQuery(
+            "SELECT SUM($column) FROM dugun WHERE tarih BETWEEN ? AND ?",
+            arrayOf(startDate, endDate)
+        )
+        var sum = 0.0
+        if (cursor.moveToFirst()) {
+            sum = cursor.getDouble(0)
+        }
+        cursor.close()
+        return sum
+    }
+    fun tumVerileriSil() {
+        val db = writableDatabase
+        db.execSQL("DELETE FROM dugun")
     }
 }
