@@ -29,7 +29,7 @@
     <string name="toplam_kazanc_label">Toplam Kazanç: ₺%1$s</string>
     <string name="konum_sayaci">İzmir: %1$d | Aydın: %2$d | Diğer: %3$d</string>
     <string name="hint_aciklama">Açıklama (isteğe bağlı)</string>
-
+    <string name="btn_kaydet_text">Kaydet</string>
     <string name="konum_sayac">İzmir: %1$d | Aydın: %2$d | Diğer: %3$d</string>
 
 

@@ -44,3 +44,8 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 }
+
+dependencies {
+    implementation(libs.material)
+}
+

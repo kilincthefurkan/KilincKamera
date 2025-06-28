@@ -10,6 +10,7 @@ import java.util.*
 class AddDugunActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        supportActionBar?.hide()
         setContentView(R.layout.activity_add_dugun)
 
         val db = DatabaseHelper(this)
@@ -19,11 +20,15 @@ class AddDugunActivity : AppCompatActivity() {
         val editBahsis = findViewById<EditText>(R.id.editBahsis)
         val editMasraf = findViewById<EditText>(R.id.editMasraf)
         val editAciklama = findViewById<EditText>(R.id.editAciklama)
-        val spinnerKonum = findViewById<Spinner>(R.id.spinnerKonum)
+        val spinnerKonum = findViewById<AutoCompleteTextView>(R.id.spinnerKonum)
         val btnKaydet = findViewById<Button>(R.id.btnKaydet)
 
+        // Konum listesi ayarı
+        val konumListesi = listOf("İzmir", "Aydın", "Diğer")
+        val adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, konumListesi)
+        spinnerKonum.setAdapter(adapter)
 
-        // DatePicker gösterme
+        // Takvim seçimi
         editTarih.setOnClickListener {
             val calendar = Calendar.getInstance()
             val year = calendar.get(Calendar.YEAR)
@@ -40,15 +45,16 @@ class AddDugunActivity : AppCompatActivity() {
                 editTarih.setText(secilenTarih)
             }, year, month, day)
 
-            datePicker.show()  // Bunu ekledik
+            datePicker.show()
         }
 
+        // Kaydet butonu işlemi
         btnKaydet.setOnClickListener {
             val tarihStr = editTarih.text.toString().trim()
             val kazancDouble = editKazanc.text.toString().toDoubleOrNull() ?: 0.0
             val bahsisDouble = editBahsis.text.toString().toDoubleOrNull() ?: 0.0
             val masrafDouble = editMasraf.text.toString().toDoubleOrNull() ?: 0.0
-            val konum = spinnerKonum.selectedItem.toString()
+            val konum = spinnerKonum.text.toString().trim()  // DÜZELTİLDİ
             val aciklama = editAciklama.text.toString().trim()
 
             if (tarihStr.isEmpty()) {
@@ -60,11 +66,5 @@ class AddDugunActivity : AppCompatActivity() {
             Toast.makeText(this, "Kayıt Başarılı", Toast.LENGTH_SHORT).show()
             finish()
         }
-
-
-        val konumlar = arrayOf("Izmir", "Aydin", "Diğer")
-        spinnerKonum.adapter = ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, konumlar)
-
-
     }
 }

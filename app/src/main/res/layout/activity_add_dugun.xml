@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/backpaper">
 
     <LinearLayout
         android:orientation="vertical"
@@ -9,76 +11,127 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <EditText
-            android:id="@+id/editTarih"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:inputType="text"
-            android:autofillHints="date"
-            android:minHeight="48dp"
-            android:padding="12dp"
-            android:hint="@string/hint_tarih" />
-
-
-
-
-
-
-
-        <EditText
-            android:id="@+id/editKazanc"
-            android:hint="@string/hint_kazanc"
-            android:layout_width="wrap_content"
-            android:layout_height="56dp"
-            android:inputType="numberDecimal"
-            android:autofillHints="moneyAmount"
-            android:padding="12dp" />
-
-        <EditText
-            android:id="@+id/editBahsis"
-            android:hint="@string/hint_bahsis"
-            android:layout_width="wrap_content"
-            android:layout_height="56dp"
-            android:inputType="numberDecimal"
-            android:autofillHints="moneyAmount"
-            android:padding="12dp" />
-
-        <EditText
-            android:id="@+id/editMasraf"
-            android:hint="@string/hint_masraf"
-            android:layout_width="wrap_content"
-            android:layout_height="56dp"
-            android:inputType="numberDecimal"
-            android:autofillHints="moneyAmount"
-            android:padding="12dp" />
-
-        <Spinner
-            android:id="@+id/spinnerKonum"
+        <TextView
+            android:id="@+id/tvTitle"
             android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:layout_marginTop="16dp"
-            />
+            android:layout_height="wrap_content"
+            android:text="Kılınç Kamera"
+            android:textAlignment="center"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:textColor="#D6D6D6"
+            android:fontFamily="@font/rsor"
+            android:layout_marginBottom="16dp"/>
 
-        <EditText
-            android:id="@+id/editAciklama"
-            android:layout_width="300dp"
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_tarih">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTarih"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:inputType="text"
+                android:autofillHints="date"
+                android:minHeight="48dp"
+                android:padding="12dp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_kazanc"
+            android:layout_marginTop="12dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editKazanc"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:inputType="numberDecimal"
+                android:autofillHints="moneyAmount"
+                android:padding="12dp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_bahsis"
+            android:layout_marginTop="12dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editBahsis"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:inputType="numberDecimal"
+                android:autofillHints="moneyAmount"
+                android:padding="12dp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_masraf"
+            android:layout_marginTop="12dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editMasraf"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:inputType="numberDecimal"
+                android:autofillHints="moneyAmount"
+                android:padding="12dp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/spinnerLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_konum"
+            android:layout_marginTop="16dp">
+
+            <AutoCompleteTextView
+                android:id="@+id/spinnerKonum"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:inputType="none"
+                android:backgroundTint="@android:color/white"
+                android:padding="12dp"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/hint_aciklama"
-            android:inputType="textMultiLine"
-            android:lines="3"
-            android:gravity="top"
-            android:layout_marginTop="8dp"
-            android:autofillHints="free_form" />
+            android:layout_marginTop="12dp">
 
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editAciklama"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine"
+                android:lines="3"
+                android:gravity="top"
+                android:autofillHints="free_form" />
 
-        <Button
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btnKaydet"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/btn_kaydet" />
-
-
-
+            android:text="@string/btn_kaydet_text"
+            style="@style/Widget.Material3.Button"
+            android:layout_marginTop="24dp"
+            android:layout_gravity="center_horizontal" />
 
     </LinearLayout>
 
