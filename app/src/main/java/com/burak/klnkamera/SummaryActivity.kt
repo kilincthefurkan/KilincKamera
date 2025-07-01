@@ -32,6 +32,10 @@ class SummaryActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_summary)
 
+        val toolbar = findViewById<androidx.appcompat.widget.Toolbar>(R.id.toolbar)
+        setSupportActionBar(toolbar)
+        supportActionBar?.setDisplayShowTitleEnabled(false)
+
         listViewDugunler = findViewById(R.id.listViewDugunler)
         db = DatabaseHelper(this)
 
@@ -99,13 +103,13 @@ class SummaryActivity : AppCompatActivity() {
         cursor.close()
 
         // Sayaçları hesapla
-        val sayacIzmir = dugunListe.count { it.konum == "Izmir" }
-        val sayacAydin = dugunListe.count { it.konum == "Aydin" }
+        val sayacİzmir = dugunListe.count { it.konum == "İzmir" }
+        val sayacAydın = dugunListe.count { it.konum == "Aydın" }
         val sayacDiger = dugunListe.count { it.konum == "Diğer" }
 
         // Sayaçları TextView'a yaz (strings.xml içinden)
         val textKonumBilgi = findViewById<TextView>(R.id.textViewKonumSayac)
-        textKonumBilgi.text = getString(R.string.konum_sayac, sayacIzmir, sayacAydin, sayacDiger)
+        textKonumBilgi.text = getString(R.string.konum_sayac, sayacİzmir, sayacAydın, sayacDiger)
 
         // Liste için gösterilecek metinler hazırlanıyor
         for (dugun in dugunListe) {
@@ -150,7 +154,7 @@ class SummaryActivity : AppCompatActivity() {
         editAciklama.setText(aciklama)
 
 
-        val konumlar = arrayOf("Izmir", "Aydin", "Diğer")
+        val konumlar = arrayOf("İzmir", "Aydın", "Diğer")
         spinnerKonum.adapter = ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, konumlar)
         spinnerKonum.setSelection(konumlar.indexOf(konum))
 

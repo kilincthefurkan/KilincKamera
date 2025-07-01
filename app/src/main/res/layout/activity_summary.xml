@@ -1,79 +1,92 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:padding="24dp"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/backpaper">
+    android:background="@color/colorBackground">
 
-    <TextView
-        android:id="@+id/textViewToplamKazanc"
+    <!-- Toolbar -->
+    <include
+        android:id="@+id/includeToolbar"
+        layout="@layout/toolbar_custom"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/toplam_kazanc"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        android:padding="8dp" />
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/textViewToplamBahsis"
+    <!-- ScrollView İçeriği -->
+    <ScrollView
+        android:id="@+id/scrollView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/toplam_bahsis"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        android:padding="8dp" />
+        android:layout_height="0dp"
+        android:padding="16dp"
+        app:layout_constraintTop_toBottomOf="@id/includeToolbar"
+        app:layout_constraintBottom_toBottomOf="parent">
 
-    <TextView
-        android:id="@+id/textViewToplamMasraf"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/toplam_masraf"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        android:padding="8dp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_card"
+            android:orientation="vertical"
+            android:padding="16dp">
 
-    <TextView
-        android:id="@+id/textViewCiro"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/ciro"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        android:padding="8dp" />
+            <!-- Başlık -->
+            <TextView
+                android:id="@+id/textTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:gravity="center"
+                android:text="Kazanç Özeti"
+                android:textColor="#333333"
+                android:textSize="24sp"
+                android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/textViewKar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/kar"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        android:padding="8dp" />
+            <!-- Özellikler -->
+            <TextView
+                android:id="@+id/textViewToplamKazanc"
+                style="@style/OzetTextStyle" />
 
-    <TextView
-        android:id="@+id/textViewKonumSayac"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="16sp"
-        android:padding="8dp"
-        android:textColor="#000000" />
+            <TextView
+                android:id="@+id/textViewToplamBahsis"
+                style="@style/OzetTextStyle" />
 
+            <TextView
+                android:id="@+id/textViewToplamMasraf"
+                style="@style/OzetTextStyle" />
 
+            <TextView
+                android:id="@+id/textViewCiro"
+                style="@style/OzetTextStyle" />
 
+            <TextView
+                android:id="@+id/textViewKar"
+                style="@style/OzetTextStyle" />
 
-    <Button
-        android:id="@+id/btnVerileriSifirla"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/btn_verileri_sifirla"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="24dp" />
+            <TextView
+                android:id="@+id/textViewKonumSayac"
+                style="@style/OzetTextStyle"
+                android:textColor="#777" />
 
-    <ListView
-        android:id="@+id/listViewDugunler"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp" />
+            <!-- Sıfırlama Butonu -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnVerileriSifirla"
+                style="@style/Widget.Material3.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Verileri Sıfırla"
+                android:textSize="24sp"
+                android:textAllCaps="false" />
 
-</LinearLayout>
+            <!-- Liste -->
+            <ListView
+                android:id="@+id/listViewDugunler"
+                android:layout_width="match_parent"
+                android:layout_height="288dp"
+                android:layout_marginTop="16dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

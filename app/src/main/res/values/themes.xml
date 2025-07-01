@@ -1,5 +1,5 @@
 <resources >
-    <style name="Theme.KlnKamera" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+    <style name="Theme.KlnKamera" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Customize your theme here -->
         <item name="colorPrimary">#545454</item>
         <item name="colorPrimaryVariant">#AFAFAF</item>

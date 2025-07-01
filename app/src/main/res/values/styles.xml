@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="OzetTextStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">8dp</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#212121</item>
+    </style>
+
+    <style name="HintTextSmall" parent="TextAppearance.MaterialComponents.Caption">
+        <item name="android:textSize">12sp</item>  <!-- Küçük boyut -->
+        <item name="android:textColor">@color/gray_600</item> <!-- İstersen renk de ayarla -->
+    </style>
+
+</resources>
